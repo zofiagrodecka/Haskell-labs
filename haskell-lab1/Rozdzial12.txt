@@ -1,0 +1,24 @@
+ghci> let f8 (x,y) = x-y
+ghci> :t f8
+f8 :: Num a => (a, a) -> a
+ghci> let f9(x,y) = if x == y then x else x*y
+ghci> :t f9
+f9 :: (Eq a, Num a) => (a, a) -> a
+ghci> let f10 (x, y, z) = x*(y/z)
+ghci> :t f10
+f10 :: Fractional a => (a, a, a) -> a
+ghci> let f11 (x, y) = if x /= y && x <= y then x/y else x+y
+ghci> :t f11
+f11 :: (Ord a, Fractional a) => (a, a) -> a
+ghci> let f12 (x,y) = if x==y && y > 0 then y else x
+ghci> :t f12
+f12 :: (Ord p, Num p) => (p, p) -> p
+ghci> let f13 (x,y) = if x==y && y > 0 then y else y*1.1
+ghci> :t f13
+f13 :: (Ord a, Fractional a) => (a, a) -> a
+ghci> let f14 (x,y) = if x==6 && y > 0 then y else y*1.1
+ghci> :t f14
+f14 :: (Ord a1, Fractional a1, Num a2, Eq a2) => (a2, a1) -> a1
+ghci> let f15 (x,y) = if x==1 || y/=2 then x+y else x/y
+ghci> :t f15
+f15 :: (Eq a, Fractional a) => (a, a) -> a

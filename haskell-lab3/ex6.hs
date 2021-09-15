@@ -1,0 +1,6 @@
+-- Zad.1
+-- ghci> ((,) $ 1) 2
+-- Zad.2
+-- Najbardziej czytelne jest 2 wyrażenie
+-- Zad.3
+-- ghci> (f .($) g . h) 3
